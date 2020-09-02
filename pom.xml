@@ -34,7 +34,7 @@
 					  <manifest>
 					    <addClasspath>true</addClasspath>
 					    <classpathPrefix>lib/</classpathPrefix>
-					    <mainClass></mainClass>
+					    <mainClass>testcases.mytheresa.pkb</mainClass>
 					  </manifest>
 					</archive>
 				      </configuration>
