@@ -22,7 +22,7 @@ import org.testng.Assert;
 import java.net.*;
 import org.testng.annotations.Test;
 public class pkb {
-	static WebDriver driver;
+	static RemoteWebDriver driver;
 	String actualTitle;
 @Test
 public void testgooglrsearch() throws MalformedURLException{
