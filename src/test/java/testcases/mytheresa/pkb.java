@@ -1,6 +1,7 @@
 package testcases.mytheresa;
 
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -20,10 +21,9 @@ import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.remote.*;
 import org.testng.Assert;
 import java.net.*;
+import java.util.concurrent.TimeUnit;
 import org.testng.annotations.Test;
 public class pkb {
-	static RemoteWebDriver driver;
-	String actualTitle;
 @Test
 public void testgooglrsearch() throws MalformedURLException{
  try {
@@ -31,14 +31,21 @@ public void testgooglrsearch() throws MalformedURLException{
 //FirefoxOptions options = new FirefoxOptions();
 //options.addArguments("-headless");
 //WebDriver driver = new RemoteWebDriver(new URL("http://40.113.221.175:4444/wd/hub"),new FirefoxOptions());
-System.out.println("I am testFirefox");
-driver = new RemoteWebDriver(new URL("http://52.186.156.179:4444/wd/hub"),new FirefoxOptions());
+RemoteWebDriver driver = new RemoteWebDriver(new URL("http://52.186.156.179:4444/wd/hub"),new FirefoxOptions());
 driver.get("http://www.google.com");
-actualTitle = driver.getTitle();
-System.out.println("ActualTitle is :" + actualTitle );
+driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+driver.findElement(By.name("q")).sendKeys("Selenium");
+String name = driver.findElement(By.name("q")).getAttribute("title");
+System.out.println("This is taking from browser : "+name);
+//System.out.println(driver.getTitle());
+//Assert.assertEquals("Only Testing");
+//Assert.assertEquals("testing","testing");
 //we expect the title “Google “ should be present 
 //String Expectedtitle = "Google";
+System.out.println("Before Running HIIIIIIIIIIIIIIIIIIIIIIIIIII");
+	 
 //it will fetch the actual title 
+//String Actualtitle = driver.getCurrentUrl();
 //String Actualtitle = driver.getTitle();
 //System.out.println("Before Assetion " + Expectedtitle + Actualtitle);
 //it will compare actual title and expected title
@@ -52,4 +59,3 @@ catch (MalformedURLException e) {
     }
  }
 }
-	
