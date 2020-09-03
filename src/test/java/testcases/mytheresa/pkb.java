@@ -50,7 +50,6 @@ System.out.println("Before Running HIIIIIIIIIIIIIIIIIIIIIIIIIII");
 	 
 //it will fetch the actual title 
 //String Actualtitle = driver.getCurrentUrl();
-//String Actualtitle = driver.getTitle();
 //System.out.println("Before Assetion " + Expectedtitle + Actualtitle);
 //it will compare actual title and expected title
 //Assert.assertEquals(Actualtitle, Expectedtitle);
