@@ -1,7 +1,6 @@
 package testcases.mytheresa;
 
 import org.openqa.selenium.WebDriver;
-import org.junit.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
