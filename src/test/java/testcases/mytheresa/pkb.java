@@ -1,7 +1,7 @@
 package testcases.mytheresa;
 
 import org.openqa.selenium.WebDriver;
-
+import org.junit.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -23,6 +23,8 @@ import org.testng.Assert;
 import java.net.*;
 import org.testng.annotations.Test;
 public class pkb {
+	static WebDriver driver;
+	String actualTitle;
 @Test
 public void testgooglrsearch() throws MalformedURLException{
  try {
@@ -31,8 +33,10 @@ public void testgooglrsearch() throws MalformedURLException{
 //options.addArguments("-headless");
 //WebDriver driver = new RemoteWebDriver(new URL("http://40.113.221.175:4444/wd/hub"),new FirefoxOptions());
 System.out.println("I am testFirefox");
-WebDriver driver = new RemoteWebDriver(new URL("http://52.170.82.26:4444/wd/hub"),new FirefoxOptions());
+driver = new RemoteWebDriver(new URL("http://52.186.156.179:4444/wd/hub"),new FirefoxOptions());
 driver.get("http://www.google.com");
+actualTitle = driver.getTitle();
+System.out.println("ActualTitle is :" + actualTitle );
 //we expect the title “Google “ should be present 
 //String Expectedtitle = "Google";
 //it will fetch the actual title 
