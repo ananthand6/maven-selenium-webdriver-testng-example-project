@@ -46,7 +46,7 @@ driver.get("http://www.google.com");
 //Assert.assertEquals("testing","testing");
 //we expect the title “Google “ should be present 
 //String Expectedtitle = "Google";
-System.out.println("Before Running HIIIIIIIIIIIIIIIIIIIIIIIIIII");
+System.out.println("After Running script.....");
 	 
 //it will fetch the actual title 
 //String Actualtitle = driver.getCurrentUrl();
