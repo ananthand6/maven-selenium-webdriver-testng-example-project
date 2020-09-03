@@ -1,11 +1,13 @@
 package testcases.mytheresa;
 
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+import java.net.MalformedURLException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
 
 import objectRepository.mytheresa.MytheresaAccountInformationPage;
 import objectRepository.mytheresa.MytheresaCreateAccountPage;
@@ -14,15 +16,14 @@ import objectRepository.mytheresa.MytheresaMyAccountPage;
 
 import static variables.mytheresa.UserVariables.*;
 
-import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.*;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.remote.*;
 import org.testng.Assert;
 import java.net.*;
 import java.util.concurrent.TimeUnit;
-import org.testng.annotations.Test;
 public class pkb {
 @Test
 public void testgooglrsearch() throws MalformedURLException{
@@ -31,12 +32,14 @@ public void testgooglrsearch() throws MalformedURLException{
 //FirefoxOptions options = new FirefoxOptions();
 //options.addArguments("-headless");
 //WebDriver driver = new RemoteWebDriver(new URL("http://40.113.221.175:4444/wd/hub"),new FirefoxOptions());
-RemoteWebDriver driver = new RemoteWebDriver(new URL("http://52.186.157.84:4444/wd/hub"),new FirefoxOptions());
+	 
+RemoteWebDriver driver = new RemoteWebDriver(new URL("http://52.186.157.84:4444/wd/hub"),new ChromeOptions());	 
 driver.get("http://www.google.com");
-driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-driver.findElement(By.name("q")).sendKeys("Selenium");
-String name = driver.findElement(By.name("q")).getAttribute("title");
-System.out.println("This is taking from browser : "+name);
+	 
+//driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+//driver.findElement(By.name("q")).sendKeys("Selenium");
+//String name = driver.findElement(By.name("q")).getAttribute("title");
+//System.out.println("This is taking from browser : "+name);
 //System.out.println(driver.getTitle());
 //Assert.assertEquals("Only Testing");
 //Assert.assertEquals("testing","testing");
